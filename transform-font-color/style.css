@@ -1,0 +1,41 @@
+html{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    width: 240px;
+    height: 60px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.box span {
+    display: inline-block;
+    color: #03A9F4;
+    transition: 0.5s
+}
+.box span:nth-child( odd ) {
+    transform: translateY(-100%)
+}
+.box span:nth-child( even ) {
+    transform: translateY(100%)
+}
+.box span::before {
+    content:attr(data-text);
+    position: absolute;
+    color: #F44336;
+}
+.box span:nth-child( odd )::before {
+    transform: translateY(100%)
+}
+.box span:nth-child( even )::before {
+    transform: translateY(-100%)
+}
+.box:hover span {
+    transform: translateY(0)
+}
