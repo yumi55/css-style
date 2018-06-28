@@ -1,0 +1,14 @@
+html,body {height: 100%;display: flex;align-items: center;justify-content: center; background: linear-gradient(to bottom, teal, aqua);}
+.battery{width: 300px;height: 134px;border-radius: 20px;color:midnightblue;border:20px solid currentColor;position: relative;background-image: linear-gradient(to right,whitesmoke,whitesmoke);background-size: 93% 89%;background-repeat: no-repeat;background-position: top 7px left 10px;animation: charge 5s infinite steps(8)}
+.battery::before{content: '';width: 36px;height: 84px;border-top-right-radius: 20px;background-origin:content-box;border-bottom-right-radius: 20px;border: 10px solid currentColor;position: absolute;right: -62px;top: 18px;background-color: currentColor;top: 50%;transform: translateY(-50%);}
+@keyframes charge {
+    from {
+        background-size: 10% 89%;
+    }
+
+    to {
+        background-size: 93% 89%;
+    }
+}
+
+
