@@ -1,0 +1,13 @@
+html,body {height: 100%;display: flex;align-items: center;justify-content: center;}
+.box{display: flex}
+.box .inner {width: 230px;height: 100px;line-height: 100px;font-size: 32px;font-weight: bold;white-space: nowrap;overflow: hidden;}
+.box .inner:first-child {background-color: indianred;color: darkred;transform: perspective(100px) rotateY(-15deg);transform-origin: right;}
+.box .inner:last-child {background-color: lightcoral;color: antiquewhite;    transform: perspective(100px) rotateY(15deg);transform-origin: left;}
+.box .inner span {position: absolute;animation: marquee 5s linear infinite}
+.box .inner:first-child span {left: -100%;animation-delay: 2.5s}
+@keyframes marquee {
+    from {left: 100%;}
+    to {left: -100%;}
+}
+
+
