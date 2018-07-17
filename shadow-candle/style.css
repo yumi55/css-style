@@ -1,0 +1,18 @@
+body{margin: 0;display: flex;justify-content: center;align-items: center;height: 100vh;background: black;}
+.candle{position:relative;display:flex;justify-content: center;width: 140px;height: 300px;background-image: linear-gradient(orange,darkorange,sienna,saddlebrown 50%,rgba(0,0,0,0.6));border-radius: 78px/28px;box-shadow: inset 41px 2px 138px rgba(0, 0, 0, 0.4), inset -16px 0 42px rgba(0, 0, 0, 0.4);}
+.candle::before{content: '';position: absolute;height: 42px;width: inherit;border: 2px solid darkorange;border-radius: 50%;box-sizing: border-box;background: radial-gradient(#444,orange,saddlebrown,sienna,darkorange);filter: opacity(0.8)}
+.thread{z-index: 2;position: absolute;top: -6px;width: 5px;height: 22px;background: linear-gradient(#111,black,orange 106%);border-radius: 40% 40% 0 0}
+.flames{position: absolute; width: 19px;height: 29px;background-color: royalblue;border-radius: 40% 40% 80% 80%;opacity: 0.7;box-sizing: border-box;top: -24px;animation: move 10s infinite}
+.flames::after{content: '';position: absolute;top: -70px;width: 22px;height: 102px;background: linear-gradient(#fff 77%,transparent);border-radius: 50% 50% 35% 35%;box-shadow: 0px -2px 8px 2px darkorange;animation:enlarge 10s infinite}
+.glow{position: absolute;background: darkorange;width: 100px;height: 100px;top: -102px;border-radius: 50%;filter: blur(50px);animation: brink 0.2s infinite}
+@keyframes brink {
+    to{filter: blur(50px) opacity(0.8)}
+}
+@keyframes move{
+    0%, 100% {transform: rotate(2deg);}
+    50% {transform: rotate(-2deg);}
+}
+@keyframes enlarge {
+    0%, 100% {height: 102px;top: -70px;}
+    50% {height: 108px;top: -76px;}
+}
